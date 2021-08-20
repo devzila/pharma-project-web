@@ -4,6 +4,7 @@
     <h1> Output: </h1>
     
 <?php
+    $result = system('cd /var/www/pharma-project-web', $val);
 echo '<pre>';
 
 // Outputs all the result of shellcommand "ls", and returns
