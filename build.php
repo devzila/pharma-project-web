@@ -1,9 +1,9 @@
 <html>
   <head><title>Message</title></head>
   <body>
-    <h1> Output: </h1>
     
 <?php
+    echo "Output"
     $result = system('cd /var/www/pharma-project-web', $val);
 echo '<pre>';
 
