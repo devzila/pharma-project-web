@@ -1,2 +1,2 @@
 <?php
-shell_exec("git pull origin main");
+echo shell_exec("git pull origin main");
