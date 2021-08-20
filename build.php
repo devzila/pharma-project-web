@@ -3,7 +3,7 @@
   <body>
     
 <?php
-    echo "Output"
+    print( "Output");
     $result = system('cd /var/www/pharma-project-web', $val);
 echo '<pre>';
 
