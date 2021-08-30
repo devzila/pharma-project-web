@@ -18,33 +18,55 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Dosis", sans-serif;
 }
 
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
-.back-to-top {
+
+#toTopBtn {
   position: fixed;
-  display: none;
-  right: 15px;
-  bottom: 15px;
-  z-index: 99999;
+  bottom: 20px;
+  right: 20px;
+  z-index: 98;
+  padding: 20px;
+  background-color: #1da2e0;
+  border-radius: 3px;
 }
 
-.back-to-top i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  width: 40px;
+.js .cd-top--fade-out {
+  opacity: .5
+}
+
+.js .cd-top--is-visible {
+  visibility: visible;
+  opacity: 1
+}
+
+.js .cd-top {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s, visibility .3s, background-color .3s
+}
+
+.cd-top {
+  position: fixed;
+  bottom: 20px;
+  bottom: var(--cd-back-to-top-margin);
+  right: 20px;
+  right: var(--cd-back-to-top-margin);
+  display: inline-block;
   height: 40px;
-  border-radius: 4px;
-  background: #49b5e7;
-  color: #fff;
-  transition: all 0.4s;
+  height: var(--cd-back-to-top-size);
+  width: 40px;
+  width: var(--cd-back-to-top-size);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .05) !important;
+  background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1571057658/cd-top-arrow.svg) no-repeat center 50%;
+  background-color: hsla(5, 76%, 62%, .8);
+  background-color: hsla(var(--cd-color-3-h), var(--cd-color-3-s), var(--cd-color-3-l), 0.8)
 }
 
-.back-to-top i:hover {
-  background: #1da2e0;
-  color: #fff;
+.height {
+  height: 3000px
 }
 
 /*--------------------------------------------------------------
@@ -733,9 +755,13 @@ section {
   }
   
   #footer .footer-top {
-    padding: 120px 0 30px 0;
+    padding: 60px 0 30px 0;
     background: #fff;
+    border-top: 1px solid #e1ecff;
+    border-bottom: 1px solid #e1ecff;
   }
+
+
   
   #footer .footer-top .footer-contact {
     margin-bottom: 30px;
